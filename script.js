@@ -19,7 +19,7 @@ yesBtn.addEventListener("click", () => {
     noBtn.style.display = "none";
 
     // Hide the heading after "Yes" is clicked
-    heading.style.visibility = "hidden"; // Use visibility instead of display
+    heading.style.display = "none";
 });
 
 // Event listener for the "No" button
@@ -33,6 +33,7 @@ noBtn.addEventListener("click", () => {
     yesBtn.style.transform = "scale(" + (1 + Math.random() * 0.5) + ")";
 });
 
+  
 
 
 
