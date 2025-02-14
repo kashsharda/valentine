@@ -9,6 +9,7 @@ body {
     align-items: center;
     height: 100vh; /* Full viewport height to center everything */
     margin: 0;
+    flex-direction: column;  /* Ensure that everything is aligned vertically */
 }
 
 h1 {
@@ -18,9 +19,10 @@ h1 {
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  /* Center the content vertically */
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center everything horizontally */
+    justify-content: center;  /* Center everything vertically */
+    text-align: center;       /* Keep text centered */
 }
 
 .buttons {
@@ -71,6 +73,3 @@ button:hover {
     display: none;  /* Hidden until "Yes" is clicked */
     transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
 }
-
-
-
