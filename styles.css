@@ -32,3 +32,11 @@ img {
     width: 300px;
     margin-top: 20px;
 }
+
+#gif {
+    width: 250px; /* Adjust size */
+    margin-top: 20px;
+    border-radius: 15px; /* Soft rounded edges */
+    display: none; /* Hidden until "Yes" is clicked */
+}
+
