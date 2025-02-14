@@ -6,6 +6,8 @@ body {
     text-align: center;
     padding: 20px;
     margin: 0;
+    position: relative; /* Important for positioning hearts */
+    overflow: hidden; /* Ensure hearts don't overflow the page */
 }
 
 /* Header styles */
@@ -57,7 +59,7 @@ button {
     transform: translate(${Math.random() * 80}%, ${Math.random() * 80}%); /* Random movement */
 }
 
-/* Disable No button */
+/* "No" button is disabled */
 #noBtn:disabled {
     cursor: not-allowed;
     background-color: #d32f2f;
@@ -69,11 +71,29 @@ button {
     margin-top: 30px;
 }
 
+/* Heart emojis scattered across the page */
+.heart-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Place hearts behind other content */
+}
 
+.heart {
+    position: absolute;
+    font-size: 1.2rem; /* Smaller heart size */
+    animation: float 5s infinite;
+}
+
+
+
+/* Larger GIF */
 #gif {
     max-width: 500px;
     max-height: 500px;
 }
+
 
 
 
