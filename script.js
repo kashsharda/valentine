@@ -2,7 +2,9 @@
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const gif = document.getElementById("gif");
-const heading = document.querySelector("h1");  // Get the <h1> element
+
+// Track how many times the "No" button is hovered
+let noHoverCount = 0;
 
 // Event listener for the "Yes" button
 yesBtn.addEventListener("click", () => {
@@ -17,21 +19,23 @@ yesBtn.addEventListener("click", () => {
     // Hide the buttons after "Yes" is clicked
     yesBtn.style.display = "none";
     noBtn.style.display = "none";
-
-    // Hide the heading after "Yes" is clicked
-    heading.style.display = "none";
 });
 
-// Event listener for the "No" button
-noBtn.addEventListener("click", () => {
-    // Change the "No" button position randomly when hovered
+// Event listener for the "No" button hover
+noBtn.addEventListener("mouseenter", () => {
+    // Move the "No" button to a random position when hovered
     noBtn.style.position = "absolute";
     noBtn.style.top = Math.random() * 80 + "%";  // Randomize the vertical position
     noBtn.style.left = Math.random() * 80 + "%"; // Randomize the horizontal position
 
-    // Make the "Yes" button bigger each time "No" is clicked
-    yesBtn.style.transform = "scale(" + (1 + Math.random() * 0.5) + ")";
+    // Increase the size of the "Yes" button each time "No" is hovered
+    noHoverCount++;  // Increment the hover count
+
+    // Scale the "Yes" button larger
+    yesBtn.style.transform = `scale(${1 + noHoverCount * 0.1})`; // Increase the scale factor with each hover
 });
+
+ 
 
   
 
