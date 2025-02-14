@@ -1,34 +1,45 @@
+/* Basic styles for the page */
 body {
     font-family: Arial, sans-serif;
     background-color: #fce4ec;
     color: #8e24aa;
     text-align: center;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height to center everything */
+    padding: 20px;
     margin: 0;
 }
 
+/* Header styles */
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d81b60;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  /* Center the content vertically */
-}
-
-.buttons {
+/* Buttons container */
+#buttons-container {
     margin-top: 20px;
 }
 
+/* Button styles */
 button {
-    background-color: #f50057;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect for Yes button */
+#yesBtn:hover {
+    background-color: #c2185b;
+}
+
+/* "No" button styles */
+#noBtn {
+    background-color: #ff4081;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -38,48 +49,30 @@ button {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.2s ease;
 }
 
-button:hover {
-    background-color: #c51162;
+/* "No" button moves randomly when hovered */
+#noBtn:hover {
+    transform: translate(${Math.random() * 80}%, ${Math.random() * 80}%); /* Random movement */
 }
 
+/* Disable No button */
+#noBtn:disabled {
+    cursor: not-allowed;
+    background-color: #d32f2f;
+    pointer-events: none;  /* Disable clicking */
+}
+
+/* Image wrapper */
 #gif-wrapper {
-    width: 400px;  /* Adjust width for bigger image */
-    height: 400px; /* Adjust height for bigger image */
-    position: relative;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 30px;
 }
 
-#gif-wrapper::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border-left: 15px solid #8e24aa;
-    border-right: 15px solid #8e24aa;
-    border-top: 15px solid #8e24aa;
-    border-bottom: 15px solid #8e24aa;
-    border-radius: 50%;
-    clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 18% 100%, 0% 35%);
-    animation: heartbeat 1s infinite;
-}
 
 #gif {
-    width: 250px;  /* Default size */
-    height: 250px; /* Default size */
-    margin-top: 20px;
-    border-radius: 15px;
-    display: none;  /* Hidden until "Yes" is clicked */
-    transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
+    max-width: 500px;
+    max-height: 500px;
 }
 
 
