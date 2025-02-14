@@ -44,6 +44,13 @@ button:hover {
     background-color: #c51162;
 }
 
+/* No button moves randomly across the page on hover */
+#noBtn:hover {
+    position: absolute;
+    top: calc(100vh * Math.random());  /* Randomize vertical position across the entire viewport */
+    left: calc(100vw * Math.random()); /* Randomize horizontal position across the entire viewport */
+}
+
 #gif-wrapper {
     width: 400px;  /* Adjust width for bigger image */
     height: 400px; /* Adjust height for bigger image */
@@ -56,13 +63,6 @@ button:hover {
     align-items: center;
 }
 
-/* No button moves on hover */
-#noBtn:hover {
-    position: absolute;
-    top: Math.random() * 80 + "%";  /* Randomize the vertical position */
-    left: Math.random() * 80 + "%"; /* Randomize the horizontal position */
-}
-
 #gif {
     width: 250px;  /* Default size */
     height: 250px; /* Default size */
@@ -71,7 +71,6 @@ button:hover {
     display: none;  /* Hidden until "Yes" is clicked */
     transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
 }
-
 
 
 
