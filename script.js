@@ -3,6 +3,9 @@ const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const gif = document.getElementById("gif");
 
+// Track how many times the "No" button is clicked
+let noClickCount = 0;
+
 // Event listener for the "Yes" button
 yesBtn.addEventListener("click", () => {
     // Set the image source
@@ -19,24 +22,16 @@ yesBtn.addEventListener("click", () => {
 });
 
 // Event listener for the "No" button
-noBtn.addEventListener("click", () => {
-    // Change the "No" button position randomly
+noBtn.addEventListener("mouseover", () => {
+    // Change the "No" button position randomly on hover
     noBtn.style.position = "absolute";
     noBtn.style.top = Math.random() * 80 + "%";  // Randomize the vertical position
     noBtn.style.left = Math.random() * 80 + "%"; // Randomize the horizontal position
 
-    // Make the "Yes" button bigger each time "No" is clicked
-    yesBtn.style.transform = "scale(" + (1 + Math.random() * 0.5) + ")";
+    // Make the "Yes" button bigger each time "No" is hovered
+    noClickCount++;  // Increase the click count
+
+    // Scale the "Yes" button larger each time "No" is hovered
+    yesBtn.style.transform = `scale(${1 + noClickCount * 0.1})`; // Increase the scale factor with each hover
 });
 
-// Event listener for the "No" button on hover
-noBtn.addEventListener("mouseenter", () => {
-    // Generate random horizontal and vertical positions
-    const randomX = Math.random() * 90 + "%";  // Randomize horizontal position (up to 90%)
-    const randomY = Math.random() * 90 + "%";  // Randomize vertical position (up to 90%)
-
-    // Apply the random positions using transform
-    noBtn.style.position = "absolute";
-    noBtn.style.top = randomY;
-    noBtn.style.left = randomX;
-});
