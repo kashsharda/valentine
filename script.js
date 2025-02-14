@@ -17,17 +17,3 @@ yesBtn.addEventListener("click", () => {
     yesBtn.style.display = "none";
     noBtn.style.display = "none";
 });
-
-// Event listener for the "No" button
-noBtn.addEventListener("click", () => {
-    // Change the "No" button position randomly
-    noBtn.style.position = "absolute";
-    noBtn.style.top = Math.random() * 80 + "%";  // Randomize the vertical position
-    noBtn.style.left = Math.random() * 80 + "%"; // Randomize the horizontal position
-
-    // Make the "Yes" button bigger each time "No" is clicked
-    yesBtn.style.transform = "scale(" + (1 + Math.random() * 0.5) + ")";
-});
-
-
-
