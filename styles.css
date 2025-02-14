@@ -45,8 +45,8 @@ button:hover {
 }
 
 #gif-wrapper {
-    width: 300px;
-    height: 300px;
+    width: 400px;  /* Adjust width for bigger image */
+    height: 400px; /* Adjust height for bigger image */
     position: relative;
     margin-top: 20px;
     margin-left: auto;
@@ -74,10 +74,12 @@ button:hover {
 }
 
 #gif {
-    width: 250px;  /* Adjust the size of the image */
+    width: 250px;  /* Default size */
+    height: 250px; /* Default size */
     margin-top: 20px;
     border-radius: 15px;
     display: none;  /* Hidden until "Yes" is clicked */
+    transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
 }
 
 /* Animation for heart border pulse */
@@ -92,4 +94,5 @@ button:hover {
         transform: scale(1);
     }
 }
+
 
