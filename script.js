@@ -6,7 +6,7 @@ const gif = document.getElementById("gif");
 
 yesBtn.addEventListener("click", () => {
     // Set the image source
-    gif.src = "your-image-path.jpg";  
+    gif.src = "cute.jpg";  
     gif.style.display = "block";       
 
     // Increase the image size
