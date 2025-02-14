@@ -47,16 +47,6 @@ button:hover {
     background-color: #c51162;
 }
 
-/* Hover effect for the "No" button */
-#noBtn:hover {
-    position: relative;
-    transform: translate(
-        calc(100vw * (Math.random() - 0.5)),   /* Random horizontal movement */
-        calc(100vh * (Math.random() - 0.5))    /* Random vertical movement */
-    );
-}
-
-/* Styling for the GIF wrapper */
 #gif-wrapper {
     width: 400px;  /* Adjust width for bigger image */
     height: 400px; /* Adjust height for bigger image */
