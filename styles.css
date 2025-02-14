@@ -1,42 +1,44 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    color: #8e24aa;
     text-align: center;
-    background-color: #ffe6f2;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .container {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    margin-top: 20px;
 }
 
 button {
-    font-size: 20px;
+    background-color: #f50057;
+    color: white;
+    border: none;
     padding: 10px 20px;
     margin: 10px;
+    font-size: 1.2rem;
     cursor: pointer;
-    border: none;
     border-radius: 10px;
 }
 
-#yesBtn {
-    background-color: #ff69b4;
-    color: white;
-}
-
-#noBtn {
-    background-color: #ff4444;
-    color: white;
-    position: absolute;
-}
-
-img {
-    width: 300px;
-    margin-top: 20px;
+button:hover {
+    background-color: #c51162;
 }
 
 #gif {
-    width: 250px; /* Adjust size */
+    width: 250px;  /* Adjust the size of the image */
     margin-top: 20px;
     border-radius: 15px; /* Soft rounded edges */
-    display: none; /* Hidden until "Yes" is clicked */
+    display: none;  /* Hidden until "Yes" is clicked */
 }
-
