@@ -7,9 +7,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height to center everything */
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
     margin: 0;
-    flex-direction: column;  /* Ensure that everything is aligned vertically */
+    flex-direction: column;  /* Stack everything vertically */
 }
 
 h1 {
@@ -40,19 +40,23 @@ button {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
 }
 
 button:hover {
     background-color: #c51162;
 }
 
-/* No button moves randomly across the page on hover */
+/* Hover effect for the "No" button */
 #noBtn:hover {
-    position: absolute;
-    top: calc(100vh * Math.random());  /* Randomize vertical position across the entire viewport */
-    left: calc(100vw * Math.random()); /* Randomize horizontal position across the entire viewport */
+    position: relative;
+    transform: translate(
+        calc(100vw * (Math.random() - 0.5)),   /* Random horizontal movement */
+        calc(100vh * (Math.random() - 0.5))    /* Random vertical movement */
+    );
 }
 
+/* Styling for the GIF wrapper */
 #gif-wrapper {
     width: 400px;  /* Adjust width for bigger image */
     height: 400px; /* Adjust height for bigger image */
@@ -73,4 +77,5 @@ button:hover {
     display: none;  /* Hidden until "Yes" is clicked */
     transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
 }
+
 
