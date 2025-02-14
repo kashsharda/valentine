@@ -4,6 +4,11 @@ body {
     color: #8e24aa;
     text-align: center;
     padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height to center everything */
+    margin: 0;
 }
 
 h1 {
@@ -15,6 +20,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;  /* Center the content vertically */
 }
 
 .buttons {
@@ -41,4 +47,8 @@ button:hover {
     margin-top: 20px;
     border-radius: 15px; /* Soft rounded edges */
     display: none;  /* Hidden until "Yes" is clicked */
+    margin-left: auto;
+    margin-right: auto;
+    /* Add flex to ensure centering of the image */
 }
+
