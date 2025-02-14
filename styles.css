@@ -73,3 +73,4 @@ button:hover {
     display: none;  /* Hidden until "Yes" is clicked */
     transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
 }
+
