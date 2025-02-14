@@ -7,9 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    height: 100vh; /* Full viewport height to center everything */
     margin: 0;
-    flex-direction: column;  /* Stack everything vertically */
 }
 
 h1 {
@@ -19,14 +18,15 @@ h1 {
 
 .container {
     display: flex;
-    flex-direction: column;   /* Stack items vertically */
-    align-items: center;      /* Center everything horizontally */
-    justify-content: center;  /* Center everything vertically */
-    text-align: center;       /* Keep text centered */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Center the content vertically */
 }
 
 .buttons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 button {
@@ -40,7 +40,6 @@ button {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
 }
 
 button:hover {
@@ -67,5 +66,3 @@ button:hover {
     display: none;  /* Hidden until "Yes" is clicked */
     transition: width 0.5s, height 0.5s; /* Smooth transition when size increases */
 }
-
-
