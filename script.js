@@ -1,20 +1,20 @@
+// Get references to the buttons and image
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const gif = document.getElementById("gif");
 
-let yesSize = 20;
-
+// Add event listener for "Yes" button
 yesBtn.addEventListener("click", () => {
-    gif.src = "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif"; // Cute GIF
-    gif.style.display = "block";
+    // Replace with your own image file (e.g., 'my-cute-image.jpg')
+    gif.src = "cute.jpg";  // Update to the image you uploaded
+    gif.style.display = "block";    // Display the image
 });
 
-noBtn.addEventListener("mouseover", () => {
-    let x = Math.random() * window.innerWidth - 100;
-    let y = Math.random() * window.innerHeight - 50;
-    noBtn.style.left = `${x}px`;
-    noBtn.style.top = `${y}px`;
-    
-    yesSize += 10;
-    yesBtn.style.fontSize = `${yesSize}px`;
+// Add event listener for "No" button (makes "Yes" button grow bigger with each click)
+noBtn.addEventListener("click", () => {
+    // Randomly move the "No" button and enlarge the "Yes" button
+    noBtn.style.position = "absolute";
+    noBtn.style.top = Math.random() * 400 + "px";
+    noBtn.style.left = Math.random() * 600 + "px";
+    yesBtn.style.fontSize = parseInt(window.getComputedStyle(yesBtn).fontSize) + 2 + "px";
 });
